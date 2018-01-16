@@ -1,0 +1,75 @@
+1. Types of Quantitative Hedge Fund Trading Startegies
+
+The strategies may focus on equities, fixed income or other asset classes,
+although rarely would a Quant Hedge Fund be involved in a long-only strategy of individual stock-picking on an unhedged basis.
+Many CTAs or "commodity Trading Advisors" also would be considered Quant Hedge Funds,
+given their role in buying or selling contracts, options on futures, or retail off-exchange forex contracts.
+
+(1) Global Macro: Focus on macroeconomic enviroment, often concentrates on currencies or major interest-rate moves.
+(2) Emerging Markets: Invests in the debt or equity(and less frequently, FX) of emerging markest.
+                      Markets are typically characterized by their relative lack of transparency and liquidity in addition
+                      to an inability to find viable derivatives contracts for hedging.
+(3) Equity Market Neutral: Trades pairs of shares - buying one and selling another - and therefore is typically neutral
+                           to market direction(i.e., employs a beta of zero). Also called statistical arbitrage. May also
+                           involve trading single stocks versus an index or an Exchange-Traded Fund(ETF) against an index.
+(4) Convertible Arbitrage: Targets pricing anomalies between convertible bonds and the underlying shares and options on shares.
+(5) Fixed Income Arbitrage: Exploits anomalies between related bonds, often with high leverage.
+(6) Event-Driven: Trades based on anticipated corporate events, such as anticipated merger or take-over activity or bankruptcy
+                  filing. Also called risk arbitrage.
+
+2. Relative Value Trading vs. Directional Trading
+
+Relative Value strategies attempt to capitalize on predictable pricing relationships(often mean-reverting relationships)
+between multiple assets, for example, the relationship between short-dated US Treasury Bill yields vs. long-dated US Treasury Bond 
+yeilds in the implied volatility in two different option contracts.
+
+Common examples of Relative Value strategies include placing relative bets(i.e., buying one asset and selling another)
+on assets whose prices are closely linked.
+
+(1) Government securities of two different countries.
+(2) Government securities of two different lengths to maturity.
+(3) Corporate vs. mortgage bond securities.
+(4) The differential in implied volatility between two derivatives.
+(5) Equity prices vs. bond prices for a corporate bond issuer.
+(6) Corporate bond yield spreads vs. Credit Default Swap(CDs) spreads.
+
+There are three very important and commonly used Relative Value strategies to be aware of:
+(1) Statistical Arbitrage:
+Trading a mean-reverting trend of the values of similar baskets of assests based on historical trading relationships.
+One common form of Statistical Arbitrage, or "Stat Arb", trading, is known as Equity Market Neutral trading. In this
+strategy, two baskets of equities are chosen(one "long" bakset and one "short" basket), with the goal that the relative
+weights of the two baksets leave the fund with zero net exposure to various risk factors(industry, geography, sector, etc.)
+Stat Arb also could involve the trading of an index a similarly matched ETF, or an index versus a single company's stock.
+(2) Convertible Arbitrage:
+Purchasing of convertible bonds issues by a company and simultaneously selling the same company's stock, with the idea being
+that should the stock of a given company decline, the profit from the short position will more than offest any loss on the
+convertible bond position, given the convertible bond's value as a fixed-income instrument. Similarly, in any upward price
+move of the common stock, the fund can profit from the conversion of its convertible bonds into stock, selling that stock
+at market value by an amount that exceeds any losses on its short position.
+(3) Fixed Income Arbitrage
+Trading fixed income securities in developed bond markets to exploit perceived relative interest rate anomalies. Fixed Income
+Arbitrage positions can use government bonds, interest rate swaps, and interest rate futures. One popular example of this
+style of trading in fixed income arbitrage is the "basis trade", in which one sells(buys) Treasury futures, and buys(sells)
+a corresponding amount of the potential deliverable bond. Here, one is taking a view on the difference between the spot
+price of a bond and the adjusted future's contract price(futures price * conversion factor) and trading the pairs of assets
+accordingly.
+
+Directional strategies, meanwhile, typically build on trend-following or other pattern-based paths suggestive of upward
+or downward momentum for a security or set of securities(for example, betting that long-dated US Treasury Bond yields will
+increase or that implied volatility will decline.)
+
+Directional trading will often incorporate some aspects of Technical Analysis or "charting." This involves predicting the direction
+the direction of prices through the study of past prices and volume market data. The "direction" being traded can be that of
+an asset itself(momentum in equity prices, for example, or the euro/U.S. dollar exchagne rate) or a factor that directly affects
+the asset price itself(for example, implie volatility for options or interest rates for government bonds).
+Technical trading may also comprise the use of moving averages, bands around the historical standard deviation of prices,
+support and resistance level, and rates of change. Typically, technical indicators would not constitute the sole basis for a 
+Quantitative Hedge Fund's investment strategy; They employ many additional factors over and above historical price and
+volume information. In other words, they employ Directional trading strategies generally have overall quantitative strategies
+that are much more sophisticated than general Technical Analysis.
+
+3. Managed Volatility
+Managed Volatility stategies use futures and forward contracts to focus on generating low, but stable, LIBOR-plus absolute returns,
+increasing or decreasing the number of contracts dynamically as the underlying volatilities of the stock, bond and the other
+markets shift. Managed Volatility Strategies have gained in popularity in recent years due to the recent instability of both
+stock and bond markets.
