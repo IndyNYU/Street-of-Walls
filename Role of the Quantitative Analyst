@@ -1,0 +1,13 @@
+What is the role of a quantative analyst?
+(1) Improving the trading architecture used to place trades;
+(2) Imporving the signals to evaluate trade ideas;
+(3) Reducing transaction costs and/or market impact;
+(4) Managing portfolio risk;
+(5) Testing and deploying new trading strategies.
+
+Day-to-day work of a Quant Analyst will always involve quantitative research in some form:
+(1) Reading academic literature to help ground trading strategies in theory;
+(2) Creating and testing a hypothesis for a given trading strategy;
+(3) Back-testing the strategy with existing data on an out-of-sample basis using actual transaction costs;
+(4) Programming and implementing the traidng strategy and proposing a systematic method for increasing 
+    or decreasing portfolio risk.
