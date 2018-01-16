@@ -1,0 +1,39 @@
+1. Mathematical Finance Topics
+
+Q1: What is Black-Scholes(B-S)? Walk me through the derivation.
+A1: B-S is a mathematical formula that is used to determine the price of a European call option(or European put option)
+    on a fiancial instrument. The model assumes that asset price movements follow geometric Brownian motion with constant
+    drift and volatility. Brownian motion originally referred to the microscopic motions of a small particle floating in
+    a liquid; if stock prices move in a similar way, then the random increments or price changes will be normally distributed
+    with an infinitesimal variance.
+    
+    Assume that the asset price S follows the following process:
+    dS = μS dt + σS dW, where μ and σ are constant, t stands for time, and W is a winer process.
+    
+    The basis of Black-Scholes is Ito's Lemma, which explains the process of stochastic behavior. If a variable x follows an
+    Ito process(dx = a(x, t) + b(x, t)dW) then Ito's Lemma shows that a function G, of x and t, follows the process.
+    
+Q2: What are the assumptions made in Black-Scholes?
+A2: (1) There is no arbitrage opportunity(i.e., there is no way to make a riskless profit).
+    (2) It is possible to borrow and lend cash at the same constant risk-free interest rate.
+    (3) It is possible to buy and sell stocks in any amount(including fractional amounts); there is no restraint on short selling.
+    (4) There are no transaction costs(the market is frictionless).
+    (5) Stock prices follow geometric Brownian motion with constant drift and constant volatility.
+    Note: The original B-S equation assumed no dividend payments. However, dividends can be taken into account by subtracting
+          them from the risk-free rate, assuming that both the dividend and the risk-free rate are continuously compounding.
+      
+Q3: What are the "Greeks" in Black-Scholes? What are vanna and volga?
+A3: The "Greeks" are the model outputs from Black-Scholes, known as Greeks due to their mathematical notation with Greek letters.
+    They provide information about the sensitivity of outputs of the model to changes in the inputs into the model.
+    (1)Delta: Measures the rate of change in the option value with respect to changes in the underlying asset's price(the first
+              derivative of the option price with respect to the underying price). It loosely equals the probability that the 
+              option finishes in-the-money. Delta for a call ranges from 0 to 1, and from -1 to 0 for puts.
+    (2)Gamma: Measures the rate of change of the option delta with respect to the change in the underlying asset price(the second
+              derivative of the option price with respect to the underlying price). Even if the underlying asset price remains
+              unchanged, the option delta for an in-the-money option increases as expiration nears; the opposite is true for an
+              out-of-the-money. The gamma of an option indicates how the delta of an option will change for a one-point move in
+              the underlying asset. In other words, the Gamma shows the option delta's sensitivity to market price changes.
+              Gamma is important for maintaining a delta neutral position.
+    (3)Vega: Measures the sensitivity of the option to changes in implied volatility. It equals the first derivative of the option
+             price with respect to the volatility of the underlying asset. Vega is typically expressed as the amount of money per
+             underlying share that the option's value will gain or lose as volatility rises of falls by 1%.
