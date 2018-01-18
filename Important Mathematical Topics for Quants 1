@@ -13,6 +13,30 @@ A1: B-S is a mathematical formula that is used to determine the price of a Europ
     The basis of Black-Scholes is Ito's Lemma, which explains the process of stochastic behavior. If a variable x follows an
     Ito process(dx = a(x, t) + b(x, t)dW) then Ito's Lemma shows that a function G, of x and t, follows the process.
     
+    If f is the price of a call option on stock S, and f is a function of S and t, then via Ito's lemma:
+    (1) df = (df/dS * μS + df/dt + 0.5 * d2f / ds2 * σ^2 * S^2)dt + (df/ds * σS)dWt
+    
+    The above formula is key to the derivation of the B-S equation, which incorporates the constant price variation(volatility)
+    of the stock, the time value of money, the option's strike price and the option's time to expiry. Black-Scholes for a non-
+    dividend paying stock depends on the construction of a riskless portfolio, where positions are taken in bonds(cash), the
+    underlying stock and options. If one holds -1 units(i.e., sold short one unit) of a derivative f plus df/ds shares, the
+    change in the value of this portfolio π over time Δt is equal to:
+    (2) Δπ = -Δf + df/dS * ΔS
+    
+    If the stock price can be modeled as above:
+    (3) dS = μSdt + σSdWt
+    
+    then via Ito's Lemma
+    (4) Δπ = (-df/dt - 0.5 * d2f/dS2 * σ^2 * S^2) * Δt
+    
+    Notice how the above equation(the change in the portfolio value)does not involve dW. During time increment Δt, the portfolio
+    is not subject to random movement-it must earn the riskless rate.
+    (5) Δπ = rπΔt
+    
+    Combined the above equations:
+    (df/dt + rSdf/dS + 0.5 * σ^2 * S^2 * d2f/dS2) = rf
+    This is called Black-Scholes equation.
+    
 Q2: What are the assumptions made in Black-Scholes?
 A2: (1) There is no arbitrage opportunity(i.e., there is no way to make a riskless profit).
     (2) It is possible to borrow and lend cash at the same constant risk-free interest rate.
@@ -37,3 +61,25 @@ A3: The "Greeks" are the model outputs from Black-Scholes, known as Greeks due t
     (3)Vega: Measures the sensitivity of the option to changes in implied volatility. It equals the first derivative of the option
              price with respect to the volatility of the underlying asset. Vega is typically expressed as the amount of money per
              underlying share that the option's value will gain or lose as volatility rises of falls by 1%.
+
+Q4: What is delta hedging? Are these scenarios where it's not profitable?
+A4: 
+
+Q5: What is realized volatility and how is it calculated?
+A5:
+
+Q6: How is realized volatility different from implied volatility?
+A6:
+
+Q7: How much should I pay for an option when the future volatility of the underlying is zero?
+A7:
+
+Q8: What is a variance swap?
+A8: 
+
+Q9: How is a forward FX rate calculated?
+A9:
+
+Q10: What is the difference between a forward contract and a futures contract?
+     Under what cases are the prices of the two contracts the same?
+A10: 
