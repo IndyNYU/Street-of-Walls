@@ -13,7 +13,17 @@ Q4. If I have a regression between X and Y, what test statistics should I look a
 A4.
 
 Q5. If I have data from 1992-2012, what's the danger if I build a model forecasting values in 2012 using all of the historical data?
-A5.
+A5. Fitting a model with all available data is called in-sample testing. A model can be constructed that may perform exceptionally
+    well during a selected period of history, but structural changes over time may mean that a model that worked well in the past
+    may not work well in the future. Rather than back-testing a model using in-sample data, create a model that uses some historical
+    data and test how well the model works when applied to data that wasn't used to construct the model. While back-testing can provide
+    valuable information regarding a model's potential, back-testing alone often produces deceptive results.
 
 Q6. Why should I care about residuals in a regression?
-A6. 
+A6. If a plot of residuals versus time does not look like white noise, the model is likely misspecified. Correlation of residuals is
+    known as autocorrelation, and can be checked by calculating the Durbin-Watson statistic. With autocorrelation of residuals, the
+    estimated regression coefficients are still unbiased but many no longer have the minimum variance among all unbiased estimates
+    (they are inefficient); moreover, confidence intervals may be underestimated and estimation of the test statistics for the F-test
+    (and so significance) may also be underestimated, potentially leading to the conclusion that the set of explanatory variables is
+    not significant as a whole.
+   
