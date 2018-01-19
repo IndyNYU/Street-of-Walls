@@ -1,16 +1,54 @@
 Econometrics
 
 Q1. What is an R-square statistic?
-A1.
+A1. An R-square statistic is a measure of goodness-of-fit, also known as the coefficient of determination. It is the proportion of
+    variability in a data set that is accounted for by the chosen model. In a simple linear regression (y = mx + b), the R-square
+    statistic is the percentage of variability in 'y' that can be explained by movements in 'x'. Note that in a linear regression,
+    R-square equals the square of the sample correlation coefficient between the outcomes(y) and their predicted values, and can be
+    thought of as a percentage from 1 to 100.
 
 Q2. What is a random walk? Is it stationary or non-stationary?
-A2.
+A2. A random walk is a path that consists of taking successive random steps. Often, the "steps" taken by a stock price are assumed
+    to follow a random walk. Random walks are not stationary, i.e., where you "are" in the walk depends on where you were immediately
+    prior to your last step. Non-stationary behaviors can include trends, cycles, random walks or combining of the three. Note that
+    while non-stationary data cannnot be modeled or forecasted, the data can usually be transformed so that they can be modeled.
+    
+    In a pure random walk(Yt = Yt-1 + et), the value or location at time t will be equal to the last period value plus a stochastic
+    (non-systematic) component that is a white noise, which means et is independently and identically distributed with mean of 0 and
+    variance to σ^2. The random walk is a non-mean reverting process that can move away from the mean either in a positive or negative
+    direction. Put another way, the means, variances and co-variances of the walk change over time. Another characteristic of a random
+    walk is that the variance evolves over time and goes to infinity as time goes to infinity; therefore, a random walk cannot be
+    predicted.
 
 Q3. What happens if you create a regression based on 2 variables that each are continuously increasing with time?
-A3.
+A3. If you attempt to model two series that are both time-dependent(say, consumption and income), you will get a spurious regression,
+    i.e., a model with a high R-square, but poor predictive properties. This is because both series are non-stationary. With non-s
+    stationary variables, one needs to transform them into stationary series; the easiest way to do this is by defferencing, or looking
+    at changes in the series. Changes in a non-stationary series are usually stationary.
+    
+    What to do if two series are non-stationary: Rather than differencing each series, one may be able to create a better model by
+    finding a conintegrating relationship. With cointegration, the aim is to detect any common stochastic trends in the underlying
+    data; whereas the two series may not be stationary, the difference between two non-stationary series may itself, be stationary.
 
 Q4. If I have a regression between X and Y, what test statistics should I look at to determine whether I have a good model?
-A4.
+A4. (1) R-square: Explain how much of the movement in the independent variable can be explained by the dependent variables chosen.
+    (2) t-Statistic: In a least squares regression, the t-statistic is the estimated regression coefficient of a given independent
+                     variable divided by its standard error. If the t-statistic is more than 2(i.e., the coefficient is at least twice
+                     as large as the standard error), one can conclude that the variable in question has a significant impact on the
+                     dependent variable.
+    (3) F-Test: In a regression model, the F-test allows one to compare the null hypothesis.
+                H0: All non-constant coefficients in the regression equation are zero.
+                H1: At least one of the non-constant coefficients in the regression equation is non-zero.
+                The F-test tests the joint explanatory power of the variables, while the t tests test their explanatory power
+                individually. One rejects the null hypothesis when the F statistic is greater than its critical value.         
+    (4) Durbin-Waston statistic: the d statistic measures the presence of autocorrelation in the residuals. The value of d always lies
+                                 between 0 and 4. A value of 2 indicates no autocorrelation. If the Durbin-Waston statistic is
+                                 substantially less than 2, there is evidence of positive serial correlation.
+    (5) Akaike Information Criterion: From among a set of models, the AIC suggests the preferred model as the one with the minimum
+                                      AIC value. The AIC = 2k - 2 * ln(L) where k is the number of parameters in the statistical
+                                      model, and L is the maximized value of the likelihood function for the estimated model. The
+                                      AIC rewards goodness of fit, but also includes a penalty that is an increasing function of the
+                                      number of estimated parameters, which discourages overfitting.
 
 Q5. If I have data from 1992-2012, what's the danger if I build a model forecasting values in 2012 using all of the historical data?
 A5. Fitting a model with all available data is called in-sample testing. A model can be constructed that may perform exceptionally
